@@ -1,1 +1,0 @@
-/Users/polluterofminds/Development/RustFun/rss-to-md/target/debug/rss-to-md: /Users/polluterofminds/Development/RustFun/rss-to-md/src/lib.rs /Users/polluterofminds/Development/RustFun/rss-to-md/src/main.rs
