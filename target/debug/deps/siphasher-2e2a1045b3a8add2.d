@@ -1,0 +1,10 @@
+/Users/polluterofminds/Development/RustFun/rss-to-md/target/debug/deps/libsiphasher-2e2a1045b3a8add2.rmeta: /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/lib.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip128.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/../README.md
+
+/Users/polluterofminds/Development/RustFun/rss-to-md/target/debug/deps/libsiphasher-2e2a1045b3a8add2.rlib: /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/lib.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip128.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/../README.md
+
+/Users/polluterofminds/Development/RustFun/rss-to-md/target/debug/deps/siphasher-2e2a1045b3a8add2.d: /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/lib.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip128.rs /Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/../README.md
+
+/Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/lib.rs:
+/Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip.rs:
+/Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/sip128.rs:
+/Users/polluterofminds/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/siphasher-1.0.1/src/../README.md:
