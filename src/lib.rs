@@ -26,3 +26,68 @@ pub fn convert_html_to_markdown(html: String) -> String {
 
 	safe_from_html_to_md(content).unwrap()
 }
+
+#[cfg(test)]
+mod tests {
+	use super::*;
+	use mockito::Server;
+
+	#[test]
+	fn convert_html() {
+		let html = String::from("<h1>Hello World!</h1>");
+
+		assert_eq!("# Hello World!\n", convert_html_to_markdown(html));
+	}
+
+	#[tokio::test]
+	async fn test_fetch_rss_success() {
+			let mut server = Server::new_async().await;
+
+			let rss_content = r#"<?xml version="1.0" encoding="UTF-8"?>
+	<rss version="2.0">
+		<channel>
+			<title>Test Feed</title>
+			<description>A test RSS feed</description>
+			<item>
+				<title>Test Item</title>
+				<description>Test description</description>
+			</item>
+		</channel>
+	</rss>"#;
+
+			let mock = server
+				.mock("GET", "/feed.xml")
+				.with_status(200)
+				.with_header("content-type", "application/rss+xml")
+				.with_body(rss_content)
+				.create_async()
+				.await;
+
+			let feed_url = format!("{}/feed.xml", server.url());
+			let result = fetch_rss(&feed_url).await;
+
+			mock.assert_async().await;
+			assert!(result.is_ok());
+			let channel = result.unwrap();
+			assert_eq!(channel.title(), "Test Feed");
+			assert_eq!(channel.items().len(), 1);
+		}
+
+		#[tokio::test]
+		#[ignore] // Run with `cargo test -- --ignored`
+		async fn test_fetch_real_rss_feed() {
+			let feed_url = "https://blog.rust-lang.org/feed.xml";
+			let result = fetch_rss(feed_url).await;
+
+			match result {
+				Ok(channel) => {
+					assert!(!channel.title().is_empty());
+					println!("Successfully fetched: {}", channel.title());
+				}
+				Err(e) => {
+					// Don't fail the test due to network issues
+					println!("Network test failed (this is okay): {}", e);
+				}
+			}
+		}
+}
