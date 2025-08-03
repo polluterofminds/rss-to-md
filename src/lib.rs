@@ -74,7 +74,7 @@ mod tests {
 		}
 
 		#[tokio::test]
-		#[ignore] // Run with `cargo test -- --ignored`
+		#[ignore]
 		async fn test_fetch_real_rss_feed() {
 			let feed_url = "https://blog.rust-lang.org/feed.xml";
 			let result = fetch_rss(feed_url).await;
@@ -85,7 +85,6 @@ mod tests {
 					println!("Successfully fetched: {}", channel.title());
 				}
 				Err(e) => {
-					// Don't fail the test due to network issues
 					println!("Network test failed (this is okay): {}", e);
 				}
 			}
